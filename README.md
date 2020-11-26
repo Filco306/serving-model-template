@@ -1,7 +1,6 @@
-# Python3 project template
-![Image example](res/img/fstimg.png)
+# Python3 serving model api template
 
-A simple template for python projects that can and should be dockerized. Created this repo since I more or less do the same procedure **every time** I create a new python API or dockerized repo. It includes pre-commit hooks cleaning up the code using `flake8`, `black` and `pre-commit`, and uses a `pre-push`-hook leveraging pytest for launching tests before every push.
+A simple template for serving ML models that can and should be dockerized. In other words, this is a template for creating ML micro-services serving predictions. Created this repo since I more or less do the same procedure **every time** I create a new python API or dockerized repo. It includes pre-commit hooks cleaning up the code using `flake8`, `black` and `pre-commit`, and uses a `pre-push`-hook leveraging pytest for launching tests before every push.
 
 Tools used:
 - `virtualenv`
@@ -33,54 +32,12 @@ If you decided to use this as a template for your own project, do the following:
 
 ### UNIX (MacOS or Linux)
 
-1. Choose `Use this as template` on [the repo website](https://github.com/Filco306/python-project-template).
+1. Choose `Use this as template` on [the repo website](https://github.com/Filco306/serving-model-template).
 2. Run `source setup.sh` to set the repo up to be done.
 
 ### Windows
 
 Honestly, I don't know. Currently, I believe this is pretty much only UNIX-compatible. If you have insights into development on a Windows-computer, feel free to add a PR to this Readme.
-
-## Operating instructions
-
-See installation instructions.
-
-Generally, in the different folders, you put the following.
-
-- `res`: Put resources such as images, data files etc.
-- `src`: Put the source code here, with the entrypoint `index.py` being the exception.
-- `test`: Put the tests here. These are run before push.
-
-## A file manifest (list of files included)
-
-```
-python-project-template/
-├── .dockerignore           # which files for docker to ignore
-├── .env.example            # an example of which secrets needed for the repo.
-├── .flake8                 # Declaring code rules
-├── .gitignore
-├── .pre-commit-config.yaml
-├── Dockerfile
-├── README.md
-├── index.py
-├── setup-folder
-│   ├── Readme-template.md
-│   └── pre-push
-├── requirements.txt
-├── res
-│   └── img
-│       └── fstimg.png
-├── setup.sh
-├── src
-│   ├── __init__.py
-│   └── run.py
-└── test
-    ├── __init__.py
-    └── test_hello.py
-```
-
-Generated using `tree` (install it using `brew install tree`). To generate your own for you own project, use
-
-``tree -a -I '*.pyc|__pycache__|.git|.pytest_cache' YOUR-REPO-NAME/``
 
 ## Copyright and licensing information
 
@@ -106,14 +63,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-## Some other nice tricks
-
-Say you have used this for a while and have several projects with this layout, but need to change all the
-
-- Change all `.pre-commit-config.yaml` to a newer version existing on your laptop:
-``find . -name ".pre-commit-config.yaml" -print -exec cp PATH_TO_NEW_FILE/.pre-commit-config.yaml {} \; ``
-**WARNING: This will change all .pre-commit-config.yaml files in the folder you are in to the newer version. If you have other projects not from this template, I would perhaps not use this command.**
-
 ## Contact information for the distributor or programmer
 
 [Filip Cornell](mailto:c.filip.cornell@gmail.com?subject=Regarding%20your%20awesome%20repo)
@@ -131,7 +80,4 @@ Say you have used this for a while and have several projects with this layout, b
 
 ## A news section (usually for users)
 
-### Coming soon
-
-A few ideas on how to improve this:
-- Add parameters to the setup.
+Nothing new planned. Shoot me a PR or whatever :)
