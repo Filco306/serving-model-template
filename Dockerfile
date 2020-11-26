@@ -1,9 +1,12 @@
-FROM ##<<INSERT IMAGE NAME>>##
+FROM python:3.7.6-buster
 
-LABEL ##<<
 
 COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
-EXPOSE ##<< INSERT ALLOCATED PORTS IF ANY>>##
+EXPOSE 5000
 
-CMD python3 index.py
+COPY src/ src/
+COPY index.py index.py
+COPY .env .env
+
+CMD ["python3", "index.py"]
