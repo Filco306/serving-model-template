@@ -11,6 +11,14 @@ Tools used:
     - `flake8`
 - `pre-push` hook: Simply a `pytest` used
 
+## Scripts
+
+Run all scripts standing in the main directory repo and typing into the console: `source scripts/SCRIPT_NAME`.
+
+- `build-image.sh` - Building the actual image
+- `generate_documentation.sh` - Autogenerate documentation in HTML for the repository.
+- `launch-api.sh` - launch the docker image.
+
 ## Resources important to understand
 
 Package/tool | Description | Resources

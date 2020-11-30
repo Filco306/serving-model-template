@@ -1,1 +1,1 @@
-pdoc src --html
+pdoc src --html --force
